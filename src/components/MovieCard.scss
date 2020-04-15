@@ -1,0 +1,62 @@
+.movie-card {
+    width: 100%;
+    position: relative;
+    color: #ffffff;
+
+    &__title {
+        position: absolute;
+        left: 50%;                        
+        top: 10%;                         
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    &__image {
+        width: 100%;
+        opacity: .8;
+    }
+
+    &__genres {
+        position: absolute;
+        left: 50%;                        
+        bottom: 10%;                         
+        transform: translate(-50%);
+    }
+
+    &__genre {
+        text-align: center;
+    }
+}
+
+// Media query for 500px
+
+@media only screen and (min-width: 500px) {
+    .movie-card {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .movie-card {
+        width: 25%;
+        &__info {
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        &:hover {
+            .movie-card__image {
+                opacity: .6;
+                transition: all .3s ease;
+            }
+            .movie-card__info {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .movie-card {
+        width: 25%;
+    }
+}
