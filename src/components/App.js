@@ -15,7 +15,7 @@ class App extends React.Component {
 		genresChecked: [],
 		rating: 3
 		}
-	}
+	}	
   
 
   	componentDidMount(){
